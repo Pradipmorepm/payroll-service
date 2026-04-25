@@ -31,7 +31,7 @@ public class PayrollServiceTest {
         return emp;
     }
 
-    // ✅ 1. Employee with leave (LOP)
+    // 1. Employee with leave (LOP)
     @Test
     public void testSalaryWithLOP() {
         EmployeePayroll emp = createEmployee(50000, 25, 3);
@@ -41,7 +41,7 @@ public class PayrollServiceTest {
         assertTrue(payslip.getGrossSalary() < 75000);
     }
 
-    // ✅ 2. Employee with bonus
+    // 2. Employee with bonus
     @Test
     public void testSalaryWithBonus() {
         EmployeePayroll emp = createEmployee(50000, 30, 5);
@@ -51,7 +51,7 @@ public class PayrollServiceTest {
         assertTrue(payslip.getGrossSalary() > 50000);
     }
 
-    // ✅ 3. High salary (tax heavy)
+    // 3. High salary (tax heavy)
     @Test
     public void testHighSalaryTax() {
         EmployeePayroll emp = createEmployee(200000, 30, 3);
@@ -61,7 +61,7 @@ public class PayrollServiceTest {
         assertTrue(payslip.getTax() > 10000);
     }
 
-    // ✅ 4. Zero attendance case
+    // 4. Zero attendance case
     @Test
     public void testZeroAttendance() {
         EmployeePayroll emp = createEmployee(50000, 0, 3);
@@ -71,7 +71,7 @@ public class PayrollServiceTest {
         assertTrue(payslip.getGrossSalary() < 10000);
     }
 
-    // ✅ 5. Arrears applied case
+    // 5. Arrears applied case
     @Test
     public void testArrearsApplied() {
         EmployeePayroll emp = createEmployee(50000, 30, 3);
